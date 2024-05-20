@@ -1,0 +1,15 @@
+#N canvas 473 463 505 416 12;
+#X obj 94 106 * 256;
+#X obj 27 156 +;
+#X obj 44 312 outlet;
+#X obj 31 25 inlet;
+#X obj 27 68 unpack f f;
+#X text 169 7 reconstitute 0-1 float;
+#X obj 43 264 * 1.5259e-05;
+#X text 140 264 / 65535 \, return to float;
+#X connect 0 0 1 1;
+#X connect 1 0 6 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 4 1 0 0;
+#X connect 6 0 2 0;
