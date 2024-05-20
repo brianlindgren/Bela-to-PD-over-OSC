@@ -1,4 +1,4 @@
-# Bela-to-PD-over-Serial
+# Bela-to-PD-over-OSC
 
 This code sends Bela's 8 analog pins over serial USB to a computer running Pure Data via OSC. 
 
