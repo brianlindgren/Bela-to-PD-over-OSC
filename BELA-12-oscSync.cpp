@@ -1,3 +1,5 @@
+//(c) 2024 Brian Lindgren
+
 #include <Bela.h>
 #include <cmath>
 #include <iostream>
