@@ -136,7 +136,7 @@
 #X connect 12 0 10 0;
 #X connect 12 0 11 0;
 #X restore 457 45 pd init;
-#N canvas 635 461 631 561 starter 0;
+#N canvas 80 416 631 561 starter 0;
 #X obj 244 90 inlet;
 #X obj 297 126 b;
 #X obj 244 354 outlet;
@@ -182,7 +182,7 @@
 #X text 43 188 re-open once state updated, f 13;
 #X text 32 292 spigot for analog data, f 12;
 #X text 367 190 clear buffers if analog data stops;
-#N canvas 821 366 1023 568 handshake 0;
+#N canvas 113 380 1023 568 handshake 0;
 #X obj 188 27 b;
 #X msg 395 94 connect 192.168.7.2 7562;
 #X obj 188 150 netsend -u -b;
@@ -197,6 +197,9 @@
 #X obj 427 222 s off;
 #X text 645 20 try to reconnect to Bela if disconnected, f 14;
 #X text 69 83 Bela handshake;
+#X obj 13 105 oscformat /osc-restart;
+#X obj 12 44 loadbang;
+#X obj 79 44 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;
 #X connect 2 0 6 0;
@@ -210,6 +213,9 @@
 #X connect 9 1 8 0;
 #X connect 9 1 11 0;
 #X connect 10 0 0 0;
+#X connect 14 0 2 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
 #X restore 24 155 pd handshake;
 #X obj 24 25 netreceive -u -b 5000;
 #X obj 24 63 oscparse;
