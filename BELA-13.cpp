@@ -1,3 +1,6 @@
+//Bela 13.1
+
+
 #include <Bela.h>
 #include <cmath>
 #include <iostream>
@@ -48,7 +51,7 @@ void ioLoop(void* arg) {
     }
 }
 
-void on_receive(oscpkt::Message* msg, void*)
+void on_receive(oscpkt::Message* msg, const char*, void*)
 {
     // we make a copy of the incoming message and we send it down the pipe to the real-time thread
     oscpkt::Message* incomingMsg = new oscpkt::Message(*msg);
